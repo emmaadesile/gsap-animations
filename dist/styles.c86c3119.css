@@ -1,0 +1,90 @@
+:root {
+  --dark: #242423;
+  --red: #DC0E01;
+}
+
+@font-face {
+  font-family: "Cinzel";
+  src: url("/Cinzel-Regular.c098b09a.ttf") format(ttf);
+}
+@font-face {
+  font-family: "NotoSans";
+  src: url("/NotoSans-Regular.6729e0e3.ttf") format(ttf);
+}
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+.header {
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.header .logo {
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem;
+}
+
+.nav-btn,
+.nav-btn__svg {
+  width: 56px;
+  height: 30px;
+}
+
+.intro {
+  height: 100vh;
+  display: flex;
+  padding: 0 4rem;
+  justify-content: space-between;
+  padding-left: 15rem;
+}
+
+.intro-title {
+  display: flex;
+  flex-direction: column;
+}
+.intro-title .intro-name {
+  font-family: "Cinzel", serif;
+  font-size: 13rem;
+  overflow: hidden;
+  font-weight: normal;
+  margin-block-end: 0;
+}
+.intro-title .intro-info {
+  font-family: "NatoSans", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  width: 500px;
+  align-self: flex-end;
+  line-height: 1.3rem;
+}
+
+.intro-images {
+  position: relative;
+  justify-self: flex-end;
+}
+.intro-images img:nth-child(1) {
+  width: 450px;
+  height: auto;
+}
+.intro-images img:nth-child(2) {
+  width: 250px;
+  position: absolute;
+  z-index: 100;
+  top: 15rem;
+  left: -7rem;
+}
+
+/*# sourceMappingURL=/styles.c86c3119.css.map */
