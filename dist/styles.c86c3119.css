@@ -1,6 +1,7 @@
 :root {
   --dark: #242423;
   --red: #DC0E01;
+  --lightBlue: hsl(199, 100%, 94%);
 }
 
 @font-face {
@@ -18,10 +19,12 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+  margin: 0;
 }
 
 html, body {
   min-height: 100vh;
+  background: #fff;
 }
 
 .header {
@@ -31,6 +34,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  background: var(--lightBlue);
 }
 .header .logo {
   font-family: "Cinzel", serif;
@@ -49,15 +53,17 @@ html, body {
   padding: 0 4rem;
   justify-content: space-between;
   padding-left: 15rem;
+  background: var(--lightBlue);
 }
 
 .intro-title {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .intro-title .intro-name {
   font-family: "Cinzel", serif;
-  font-size: 13rem;
+  font-size: 15vw;
   overflow: hidden;
   font-weight: normal;
   margin-block-end: 0;

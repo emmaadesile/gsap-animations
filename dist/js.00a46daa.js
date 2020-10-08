@@ -5537,7 +5537,7 @@ exports.default = exports.gsap = gsapWithCSS;
 var _gsap = require("gsap");
 
 // gsap.registerPlugin(ScrollTrigger);
-// ======================
+// ===============================
 var select = function select(e) {
   return document.querySelector(e);
 };
@@ -5575,22 +5575,23 @@ function animateIntro() {
     }
   });
 
-  tl.from(introImage1, {
-    y: -30,
-    duration: 1,
-    ease: "power4.out"
-  }, 0.5).from(introImage2, {
-    y: 20,
-    duration: 1.5
-  }, -0.2).from(introName, {
+  tl.from(introName, {
     y: 200,
-    duration: 2,
+    duration: 1,
     ease: "power2.out"
-  }, 2).from(introInfo, {
+  }).from(introInfo, {
     x: -50,
-    duration: 1.5,
+    duration: 2,
     ease: "power3.out"
-  }, 2.8);
+  }).from(introImage1, {
+    y: -40,
+    duration: 10,
+    ease: "power4.out"
+  }, "<0.2").from(introImage2, {
+    y: 40,
+    duration: 10,
+    ease: "power4.out"
+  }, "<0.2");
 }
 
 function init() {

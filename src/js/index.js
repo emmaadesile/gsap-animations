@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 
 // gsap.registerPlugin(ScrollTrigger);
 
-// ======================
+// ===============================
 const select = e => document.querySelector(e);
 const selectAll = e => document.querySelectorAll(e);
 
@@ -30,25 +30,26 @@ function animateIntro() {
     opacity: 0,
   }});
   
-  tl.from(introImage1, {
-    y: -30,
-    duration: 1,
-    ease: "power4.out"
-  }, 0.5)
-  .from(introImage2, {
-    y: 20,
-    duration: 1.5,
-  }, -0.2)
-  .from(introName, {
+  tl.from(introName, {
     y: 200,
-    duration: 2,
+    duration: 1,
     ease: "power2.out",
-  }, 2)
+  })
   .from(introInfo, {
     x: -50,
-    duration: 1.5,
+    duration: 2,
     ease: "power3.out"
-  }, 2.8)
+  })
+  .from(introImage1, {
+    y: -40,
+    duration: 10,
+    ease: "power4.out"
+  }, "<0.2")
+  .from(introImage2, {
+    y: 40,
+    duration: 10,
+    ease: "power4.out"
+  }, "<0.2" )
 }
 
 function init() {
